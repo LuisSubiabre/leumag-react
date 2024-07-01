@@ -1,12 +1,12 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { EquipoDirectivo } from './components/EquipoDirectivo';
 import Hero from './components/Hero';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/leumag-react">
       <Navbar />
       <Hero />
       <Routes>
@@ -18,3 +18,5 @@ function App() {
 }
 
 export default App;
+
+

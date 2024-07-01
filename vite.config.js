@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: 'https://LuisSubiabre.github.io/leumag-react/',
+  base: '/leumag-react/',
 });
