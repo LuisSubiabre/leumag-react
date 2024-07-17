@@ -1,11 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import logoImage from '../assets/img/logo11.png';
+import { Button } from "./Button";
+import { ModeToggle  } from "./ModeToggle";
 
 export default function Navbar() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
 
-
+      <Link className="navbar-item" to="/">
+      <img src={logoImage} alt="Logo Liceo Experimental Umag" />
+    <span className="has-text-weight-bold">Liceo Experimental Umag</span>
+    </Link>
         <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -16,49 +23,23 @@ export default function Navbar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item">
+          <Link to='/' className="navbar-item">
             Inicio
-          </a>
+          </Link>
 
           <a className="navbar-item">
-            Documentation
+            Documentos
           </a>
 
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">
-              Nosotros
-            </a>
+          <Link to='/Nosotros' className="navbar-item">
+            Nosotros
+          </Link>
+                  
+          <Link to='/Estamentos' className="navbar-item">
+            Estamentos
+          </Link>
 
-            <div className="navbar-dropdown">
-              <a className="navbar-item">
-                Saludo Director
-              </a>
-              <a className="navbar-item is-selected">
-                Misión & Visión
-              </a>
-              <a className="navbar-item">
-                Dependencias
-              </a>
-            </div>
-          </div>
-
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">
-              Estamentos
-            </a>
-
-            <div className="navbar-dropdown">
-              <a className="navbar-item">
-                Equipo Directivo
-              </a>
-              <a className="navbar-item is-selected">
-                Docentes
-              </a>
-              <a className="navbar-item">
-                Asistentes de la educación
-              </a>
-            </div>
-          </div>
+           
 
           <a className="navbar-item">
             Contacto
@@ -69,14 +50,16 @@ export default function Navbar() {
 
         <div className="navbar-end">
           <div className="navbar-item">
-            <div className="buttons">
-              <a className="button is-primary">
-                <strong>Sign up</strong>
-              </a>
-              <a className="button is-light">
-                Log in
-              </a>
-            </div>
+          <ModeToggle />
+
+         <Button
+         title="Funcionarios"
+         url="http://latium.cl/leumag/ph/funcionario/" />
+
+        <Button
+         title="Apoderados"
+         url="http://latium.cl/leumag/ph/apoderados/" />
+        
           </div>
         </div>
       </div>

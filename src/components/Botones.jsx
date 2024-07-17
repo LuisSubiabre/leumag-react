@@ -1,16 +1,17 @@
 import React from "react";
 
-export default function Botones(){
-    return(
-       <div className="fixed-grid">  
-        <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
-            <div className="box-btn">Calendario de Evaluaciones</div>
-            <div className="box-btn">Lista de Materiales</div>
-            <div className="box-btn">Horario ACLES</div>
-            <div className="box-btn">Apoderado</div>
-            <div className="box-btn">Funcionario</div>
+export default function Botones() {
+    return (
+        <div className="fixed-grid">
+            <div className="is-flex is-justify-content-center is-flex-wrap-wrap">
+                <a href="#"><div className="box-btn btn-home">Calendario de Evaluaciones</div></a>
+                <a href="#"><div className="box-btn btn-home">Lista de Materiales</div></a>
+                <a href="#"><div className="box-btn btn-home">Horario ACLES</div></a>
+                <a href="#"><div className="box-btn btn-home">Apoderado</div></a>
+                <a href="#"><div className="box-btn btn-home">Funcionario</div></a>
+
+            </div>
         </div>
-        </div>     
 
 
     );
