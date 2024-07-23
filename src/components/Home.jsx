@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./Card";
 import Botones from "./Botones";
 import Documentos from "./Documentos";

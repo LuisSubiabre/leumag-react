@@ -1,5 +1,5 @@
 // Noticia.jsx
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -33,7 +33,7 @@ const Noticia = () => {
   }, [id]);
 
   if (loading) {
-    return <div className='container has-text-centered hero-footer-bg px-6'><button class="button is-loading ">Cargando noticia...</button></div>;
+    return <div className='container has-text-centered hero-footer-bg px-6'><button className="button is-loading ">Cargando noticia...</button></div>;
   }
 
   if (!noticia) {
@@ -42,10 +42,12 @@ const Noticia = () => {
 
   return (
     <>
+
+
       <div className="container hero-footer-bg px-6">
         {noticia.featuredMedia && (
           <figure className="image is-1by1">
-            <img src={noticia.featuredMedia} alt={noticia.title} />
+            <img src={noticia.featuredMedia} alt={noticia.title} className='img-noticia' />
           </figure>
         )}
         <h1 className="title pt-4" dangerouslySetInnerHTML={{ __html: noticia.title }}></h1>

@@ -20,7 +20,7 @@ export const ModeToggle = () => {
 
   return (
     <button className="button is-white" onClick={toggleMode}>
-        <i class="fas fa-adjust"></i> 
+      <i className="fas fa-adjust"></i>
       {/* {isDarkMode ? ' Modo Claro' : ' Modo Oscuro'} */}
     </button>
   );

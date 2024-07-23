@@ -77,6 +77,11 @@ html[data-theme='dark'] .hero-footer-bg {
 
 }
 
+.img-noticia {
+  border-radius: 10px;
+  width: 450px;
+}
+
 @keyframes mymove {
   5% {
     transform: rotate(5deg);

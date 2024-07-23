@@ -1,6 +1,5 @@
-import React from "react";
 import Posts from './Posts';
-
+import { Link } from "react-router-dom";
 export default function Card() {
     return (
         <>
@@ -9,7 +8,10 @@ export default function Card() {
                     <Posts />
                 </div>
                 <div className='is-flex is-justify-content-flex-end'>
-                    <button className="button is-link is-light is-outlined">Ver más noticias</button>
+                    <Link to='/Noticias' className="navbar-item">
+                        <button className="button is-link is-light is-outlined">Ver más noticias</button>
+                    </Link>
+
                 </div>
             </div>
         </>
