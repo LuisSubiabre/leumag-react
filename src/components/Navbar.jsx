@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logoImage from '../assets/img/logo11.png';
 import { Button } from "./Button";
@@ -47,15 +46,16 @@ export default function Navbar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <ModeToggle />
-
-            <Button
-              title="Funcionarios"
-              url="http://latium.cl/leumag/ph/funcionario/" />
-
-            <Button
-              title="Apoderados"
-              url="http://latium.cl/leumag/ph/apoderados/" />
-
+            <a href="http://latium.cl/leumag/ph/funcionario/" target="_blank">
+              <Button
+                title="Funcionarios"
+                url="http://latium.cl/leumag/ph/funcionario/" />
+            </a>
+            <a href="http://latium.cl/leumag/ph/apoderado/" target="_blank">
+              <Button
+                title="Apoderados"
+                url="http://latium.cl/leumag/ph/apoderados/" />
+            </a>
           </div>
         </div>
       </div>

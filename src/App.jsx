@@ -12,6 +12,10 @@ import { Footer } from './components/Footer';
 import { Nosotros } from './components/Nosotros';
 import { Contact } from './components/Contacto';
 import { Noticias } from './components/Noticias';
+import { NotFound } from './components/NotFound';
+import Materiales from './components/Materiales';
+import Evaluaciones from './components/Evaluaciones';
+
 function App() {
   return (
     <>
@@ -28,6 +32,9 @@ function App() {
         <Route path='/Contacto' element={<Contact />} />
         <Route path='/noticia/:id' element={<Noticia />} />
         <Route path='/noticias' element={<Noticias />} />
+        <Route path='/Materiales' element={<Materiales />} />
+        <Route path='/Evaluaciones' element={<Evaluaciones />} />
+        <Route path="*" element={<NotFound />} /> {/* Ruta para manejar 404 */}
       </Routes>
       <Footer />
     </>
